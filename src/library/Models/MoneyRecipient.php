@@ -1,7 +1,6 @@
 <?php
 class MoneyRecipient implements JsonSerializable {
     private $customerCode;
-    private $email;
     private $amount;
 
     function __construct()
@@ -13,10 +12,9 @@ class MoneyRecipient implements JsonSerializable {
         } 
 	}
 
-    function __construct3($customerCode, $email, $amount)
+    function __construct2($customerCode, $amount)
 	{
 		$this->customerCode = $customerCode;
-		$this->email = $email;
 		$this->amount = $amount;
 	}
     /**
@@ -40,29 +38,6 @@ class MoneyRecipient implements JsonSerializable {
     public function getCustomerCode()
     {
         return $this->customerCode;
-    }
-
-    /**
-     * Email or Phone of the item.
-     *
-     * @param string $email
-     *
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-        return $this;
-    }
-
-    /**
-     * Email or Phone of the item.
-     *
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->email;
     }
 
     /**
@@ -91,7 +66,6 @@ class MoneyRecipient implements JsonSerializable {
     public function jsonSerialize() {
         return [
             'customerCode' => $this->customerCode,
-            'email' => $this->email,
             'amount' => $this->amount
         ];
     }

@@ -43,7 +43,6 @@
         <table class="table col-md-8">
             <thead>
                 <tr>
-                    <th>Email/Phone</th>
                     <th>Customer Code</th>
                     <th class="text-right">Amount (ETB)</th>
                 </tr>
@@ -51,7 +50,6 @@
             <tbody>
             <?php foreach($request->getRecipients() as $recipient): ?>
                 <tr>
-                    <td><?= $recipient->getEmail(); ?></td>
                     <td><?= $recipient->getCustomerCode(); ?></td>
                     <td class="text-right"><?= number_format($recipient->getAmount(), 2); ?></td>
                 </tr>

@@ -21,9 +21,9 @@
     //Create new setting object
     $settings = new YenePaySettings($merchantCode, $token, $signingKey);
 
-    //Create recipients array with customerCode, email/phone, amount
+    //Create recipients array with customerCode, amount
     $recipients = array(
-        new MoneyRecipient('9358', '+251911000011', 8)
+        new MoneyRecipient('9358', 8)
     );
 
     //Create YenePay client with the setting

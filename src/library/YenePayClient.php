@@ -10,6 +10,7 @@ require_once (__DIR__ . '/Config/YenePaySettings.php');
 require_once (__DIR__ . '/Models/SendMoneyResponse.php');
 class YenePayClient {
     const API_BASE_URL = "https://endpont.yenepay.com/api/client/send";
+    // const API_BASE_URL = "https://host.docker.internal:44327/api/client/send";
     private $settings;
     
     public function __construct(YenePaySettings $settings) {

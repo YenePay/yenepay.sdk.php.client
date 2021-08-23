@@ -114,7 +114,7 @@ class SendMoneyResponse implements JsonSerializable {
     private function toRecipientArray($recipients){
         $recArrays = array();
         foreach ($recipients as $rec) {
-            $recArrays[] = new MoneyRecipient($rec->{'customerCode'}, $rec->{'email'}, $rec->{'amount'});
+            $recArrays[] = new MoneyRecipient($rec->{'customerCode'}, $rec->{'amount'});
         }
         return $recArrays;
     }
