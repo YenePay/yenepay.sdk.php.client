@@ -65,12 +65,12 @@ To send money you can use the following php code
     }
 ```
 
-The response object is an instance of a class [SendMoneyResponse.php](https://github.com/YenePay/yenepay.sdk.php.client/tree/master/src/library/Models/)
+The response object is an instance of a class [SendMoneyResponse.php](https://github.com/YenePay/yenepay.sdk.php.client/tree/master/src/library/Models/SendMoneyResponse.php)
 
 ### Example
 You can find a working example in the example directory in this repository. Please look at [send_money.php](https://github.com/YenePay/yenepay.sdk.php.client/tree/master/src/example/send_money.php) to see how to send the request. The [send.php](https://github.com/YenePay/yenepay.sdk.php.client/tree/master/src/example/send.php) will show the parsed request and response in detail for debugging.
 
-![YenePay Send Money Client](https://github.com/YenePay/yenepay.sdk.php.client/tree/master/example.png)
+![YenePay Send Money Client](https://github.com/YenePay/yenepay.sdk.php.client/raw/master/example.png)
 
 ### More
 For more information please visit
