@@ -20,7 +20,10 @@ class SendMoneyRequest implements JsonSerializable {
         $this->payerSignature = $payerSignature;
         return $this;
     }
-
+    public function getPayerSignature()
+    {
+        return $this->payerSignature;
+    }
     public function getServiceProviderCode()
     {
         return $this->serviceProviderCode;
@@ -40,19 +43,14 @@ class SendMoneyRequest implements JsonSerializable {
         return $this->msgToRecipients;
     }
 
-    public function setTotalPayment($totalPayment)
-    {
-        $this->totalPayment = $totalPayment;
-        return $this;
-    }
     public function getTotalPayment()
     {
-        if(is_array($this->recipients))
+        if(!is_array($this->recipients))
         return 0;
 
         $sum = 0;
         foreach ($this->recipients as $rec) {
-            $sum = $sum + $rec->amount;
+            $sum = $sum + $rec->getAmount();
         }
         return $sum;
     }

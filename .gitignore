@@ -341,3 +341,5 @@ healthchecksdb
 /src/vendor
 /docker-compose.yml
 /scripts
+/Dockerfile
+/.env
