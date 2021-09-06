@@ -1,0 +1,33 @@
+{
+  "name": "yenepay/php-client-sdk",
+  "type": "library",
+  "description": "YenePay Client SDK for PHP",
+  "keywords": [
+    "yenepay",
+    "payment",
+    "sdk",
+    "php",
+    "client",
+    "sendmoney"
+  ],
+  "homepage": "https://github.com/YenePay/yenepay.sdk.php",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sisay Getnet",
+      "email": "Sisay.Getnet@yenepay.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "rmccue/requests": ">=1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "YenePayClient\\": "./library"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
